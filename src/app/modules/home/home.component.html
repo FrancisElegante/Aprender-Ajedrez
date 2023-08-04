@@ -1,0 +1,12 @@
+<button routerLink="/seleccionado"></button>
+<div class="row justify-content-center">
+  <div class="card card-spacing" style="width: 18rem;" *ngFor="let curso of cursos$ | async">
+    <img src="{{curso.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{curso.nombre}}</h5>
+      <p class="card-text">{{curso.descripcion}}</p>
+      <a class="btn btn-primary" (click)="inspeccionar(curso)">Ir al curso!</a>
+    </div>
+  </div>
+</div>
+

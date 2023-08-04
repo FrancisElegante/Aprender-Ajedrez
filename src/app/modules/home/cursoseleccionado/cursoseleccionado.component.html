@@ -1,0 +1,15 @@
+<p>cursoseleccionado works!</p>
+<div *ngIf="productos$ | async as cursos">
+    <div class="card" *ngFor="let cursos of cursos">
+      <div class="card-header">
+        <h5 class="card-title">{{ cursos.nombre }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">ID: {{ cursos.id }}</h6>
+      </div>
+      <div class="card-body">
+        <img class="card-img-top" src="{{ cursos.image }}" alt="Imagen del producto" width="10px" height="500px">
+        <p class="card-text">{{ cursos.descripcion }}</p>
+        <p class="card-text">Precio: {{ cursos.duracion }}</p>
+      </div>
+    </div>
+  </div>
+  
